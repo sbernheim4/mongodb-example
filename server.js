@@ -21,11 +21,11 @@ app.post('/quotes', (req, res) => {
 });
 
 
-const MongoClient = require('mongodb').MongoClient
+const MongoClient = require('mongodb').MongoClient;
 
 const url = "mongodb://sambernheim:dwe74leaM!@ds153732.mlab.com:53732/star-wars-quotes";
 
-MongoClient.connect('', (err, database) => {
+MongoClient.connect(url, (err, database) => {
 	if (err) {
 		return console.log(err);
 	}
