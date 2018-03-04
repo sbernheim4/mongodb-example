@@ -19,7 +19,7 @@ app.get('/view', (req, res) => {
 
 let db;
 const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://sambernheim:dwe74leaM!@ds153732.mlab.com:53732/star-wars-quotes";
+const url = `mongodb://sambernheim:${process.env.MONGODBPASSWORD}@ds153732.mlab.com:53732/star-wars-quotes`;
 
 MongoClient.connect(url, (err, database) => {
 	if (err) console.log(err);
